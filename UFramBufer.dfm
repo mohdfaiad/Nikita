@@ -38,6 +38,7 @@ object FramBufer: TFramBufer
       DisabledIndex = 49
       ImageIndex = 48
       Caption = #1042' '#1076#1086#1082#1091#1084#1077#1085#1090
+      OnClick = BtnMoveAllLeftClick
     end
     object BtnRecycle: TRzToolButton
       Left = 155
@@ -111,6 +112,9 @@ object FramBufer: TFramBufer
         Top = 212
         Width = 179
         Height = 0
+        ExplicitTop = 212
+        ExplicitWidth = 179
+        ExplicitHeight = 0
       end
     end
     inherited cxDBImage1: TcxDBImage

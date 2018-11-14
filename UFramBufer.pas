@@ -63,12 +63,13 @@ type
     procedure RzToolButton5Click(Sender: TObject);
     procedure LkpSkladPropertiesChange(Sender: TObject);
     procedure cxGridDBTableViewBufferKeyPress(Sender: TObject; var Key: Char);
+    procedure BtnMoveAllLeftClick(Sender: TObject);
   private
     { Private declarations }
     scan  : string;
     scan_time : ttime;
   public
-
+    activeForm  : integer;
     { Public declarations }
   end;
 
@@ -81,6 +82,18 @@ uses
 
 
 
+
+procedure TFramBufer.BtnMoveAllLeftClick(Sender: TObject);
+begin
+  case activeForm of
+    IdxDocIn:
+      break;
+    IdxDocOut:
+      break;
+    IdxDocMove:
+      break;
+  end;
+end;
 
 procedure TFramBufer.cxGridDBTableViewBufferDragDrop(Sender, Source: TObject; X,
   Y: Integer);

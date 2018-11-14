@@ -1,6 +1,6 @@
 program Nikita;
 
-{$R 'Resource\resource.res' 'Resource\resource.rc'}
+{$R 'resource.res' 'Resource\resource.rc'}
 
 uses
   Forms,
@@ -87,14 +87,14 @@ uses
   UFrmDocView in 'UFrmDocView.pas' {FrmDocView},
   UFrmDocSpisan in 'UFrmDocSpisan.pas' {FrmDocSpisan},
   uDlgImportInputDoc in 'uDlgImportInputDoc.pas' {DlgImportInputDoc},
-  UMy_types in 'UMy_types.pas'{,
+  UMy_types in 'UMy_types.pas' {,
   DriverError in 'ShtrihDrv\DriverError.pas',
   DriverTypes in 'ShtrihDrv\DriverTypes.pas',
   DrvFRLib_TLB in 'ShtrihDrv\DrvFRLib_TLB.pas',
   GlobalConst in 'ShtrihDrv\GlobalConst.pas',
   LogFile in 'ShtrihDrv\LogFile.pas',
   RegExpr in 'ShtrihDrv\RegExpr.pas',
-  SMDrvFR1CLib_TLB in 'ShtrihDrv\SMDrvFR1CLib_TLB.pas' {/  StringUtils in 'ShtrihDrv\StringUtils.pas';},
+  SMDrvFR1CLib_TLB in 'ShtrihDrv\SMDrvFR1CLib_TLB.pas' {/  StringUtils in 'ShtrihDrv\StringUtils.pas';},
   uDlgShtrihProperty in 'uDlgShtrihProperty.pas' {DlgShtrihProperty},
   UFrmInputDocBackRozn in 'UFrmInputDocBackRozn.pas' {FrmInputDocBackRozn};
 

@@ -53,6 +53,9 @@ uses
   function GetPassword : string;
   procedure ShowConsole;
   procedure ShowNsiGoodsInfo;
+  /// <summary>
+  ///  Процедура заполнения буфера перетаскиванием
+  ///  </summary>
   procedure DragDropGood(source : TcxGridDBTableView; dest : TpFIBDataSet);
   function translate(capt : string;lang : string; Dict : TIniFile) : string;
   function translateCapt(capt : string;lang : string; DictFileName : String) : string;
@@ -68,7 +71,9 @@ var
   def_sklad : integer;
   kkm : TKkm;
 const CheckCount=1;
-
+const IdxDocIn=1;
+const IdxDocOut=2;
+const IdxDocMove=3;
 implementation
 
 uses
@@ -209,7 +214,8 @@ begin
           begin
             if columns[i].DataBinding.FieldName='F_GOOD' then
               f_index:=i;
-            if columns[i].DataBinding.FieldName='F_CNT' then
+            if ((columns[i].DataBinding.FieldName='F_CNT')
+              or (columns[i].DataBinding.FieldName='F_END_OST')) then
               f_cnt_index:=i;
           end;
 
