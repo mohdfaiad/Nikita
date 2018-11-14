@@ -117,5 +117,9 @@ begin
     Application.Run;
   end
   else
+  begin
+    DM.Free;
     Application.Terminate;
+  end;
+
 end.
