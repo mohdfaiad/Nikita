@@ -18,20 +18,23 @@ object FrmMain: TFrmMain
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 523
-    Top = 116
+    Top = 126
     Width = 5
-    Height = 440
+    Height = 430
     Align = alRight
     Visible = False
     ExplicitLeft = 616
+    ExplicitTop = 116
+    ExplicitHeight = 440
   end
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
     Width = 860
-    Height = 116
+    Height = 126
     BarManager = dxBarManager
     ColorSchemeName = 'Blue'
+    Contexts = <>
     TabOrder = 1
     TabStop = False
     object dxRibbon1Tab1: TdxRibbonTab
@@ -44,6 +47,7 @@ object FrmMain: TFrmMain
         item
           ToolbarName = 'dxBarManagerBar3'
         end>
+      Index = 0
     end
     object dxRibbon1Tab2: TdxRibbonTab
       Caption = #1056#1086#1079#1085#1080#1094#1072
@@ -51,6 +55,7 @@ object FrmMain: TFrmMain
         item
           ToolbarName = 'dxBarManagerBar1'
         end>
+      Index = 1
     end
   end
   object dxRibbonStatusBar1: TdxRibbonStatusBar
@@ -71,26 +76,29 @@ object FrmMain: TFrmMain
   end
   object Panel: TPanel
     Left = 528
-    Top = 116
+    Top = 126
     Width = 332
-    Height = 440
+    Height = 430
     Align = alRight
     Color = clAppWorkSpace
     DockSite = True
     ParentBackground = False
     TabOrder = 2
     Visible = False
+    ExplicitLeft = -28
+    ExplicitTop = 116
+    ExplicitHeight = 63
     inline FramBufer1: TFramBufer
       Left = 1
       Top = 1
       Width = 330
-      Height = 438
+      Height = 428
       Align = alClient
       TabOrder = 0
       ExplicitLeft = 1
       ExplicitTop = 1
       ExplicitWidth = 330
-      ExplicitHeight = 438
+      ExplicitHeight = 428
       inherited RzToolbar1: TRzToolbar
         Width = 330
         ExplicitWidth = 330
@@ -104,9 +112,9 @@ object FrmMain: TFrmMain
         end
       end
       inherited FramGoodCard1: TFramGoodCard
-        Top = 225
+        Top = 215
         Width = 330
-        ExplicitTop = 225
+        ExplicitTop = -152
         ExplicitWidth = 330
         inherited Panel4: TPanel
           Width = 129
@@ -127,10 +135,10 @@ object FrmMain: TFrmMain
             StyleHot.LookAndFeel.SkinName = ''
             ExplicitWidth = 127
             Width = 127
+            AnchorX = 65
           end
           inherited cxGrid1: TcxGrid
             Width = 127
-            LookAndFeel.SkinName = 'MoneyTwins'
             ExplicitTop = 212
             ExplicitWidth = 127
             ExplicitHeight = 0
@@ -142,7 +150,7 @@ object FrmMain: TFrmMain
       end
       inherited cxGrid: TcxGrid
         Width = 330
-        Height = 177
+        Height = 167
         ExplicitWidth = 330
         ExplicitHeight = 177
         inherited cxGridDBTableViewBuffer: TcxGridDBTableView
@@ -165,9 +173,9 @@ object FrmMain: TFrmMain
   end
   object PageControl1: TcxPageControl
     Left = 0
-    Top = 116
+    Top = 126
     Width = 523
-    Height = 440
+    Height = 430
     Align = alClient
     BiDiMode = bdLeftToRight
     Color = clAppWorkSpace
@@ -177,19 +185,21 @@ object FrmMain: TFrmMain
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
-    LookAndFeel.Kind = lfFlat
-    LookAndFeel.SkinName = 'MoneyTwins'
-    LookAndFeel.SkinName = 'MoneyTwins'
-    Options = [pcoAlwaysShowGoDialogButton, pcoCloseButton, pcoGradient, pcoGradientClientArea, pcoRedrawOnResize]
     ParentBackground = False
     ParentBiDiMode = False
     ParentColor = False
     ParentFont = False
-    TabOrder = 7
-    ClientRectBottom = 438
-    ClientRectLeft = 2
-    ClientRectRight = 521
-    ClientRectTop = 2
+    TabOrder = 3
+    Properties.CustomButtons.Buttons = <>
+    Properties.Options = [pcoAlwaysShowGoDialogButton, pcoCloseButton, pcoGradient, pcoGradientClientArea, pcoRedrawOnResize]
+    LookAndFeel.Kind = lfFlat
+    LookAndFeel.SkinName = 'MoneyTwins'
+    ExplicitTop = 116
+    ExplicitHeight = 440
+    ClientRectBottom = 426
+    ClientRectLeft = 4
+    ClientRectRight = 519
+    ClientRectTop = 4
   end
   object RzRegIniFile: TRzRegIniFile
     Path = 'nikita_main'
@@ -273,8 +283,8 @@ object FrmMain: TFrmMain
   object dxBarManager: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Categories.Strings = (
       #1050#1086#1084#1072#1085#1076#1099' '#1087#1088#1086#1075#1088#1072#1084#1084#1099
@@ -297,11 +307,7 @@ object FrmMain: TFrmMain
     UseSystemFont = True
     Left = 280
     Top = 272
-    DockControlHeights = (
-      0
-      0
-      0
-      0)
+    PixelsPerInch = 96
     object dxBarManagerBar2: TdxBar
       AllowClose = False
       Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1099
@@ -342,7 +348,7 @@ object FrmMain: TFrmMain
     object dxBarManagerBar3: TdxBar
       Caption = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082#1080
       CaptionButtons = <>
-      DockedLeft = 390
+      DockedLeft = 407
       DockedTop = 0
       FloatLeft = 281
       FloatTop = 352
@@ -402,14 +408,6 @@ object FrmMain: TFrmMain
       UseOwnFont = False
       Visible = True
       WholeRow = False
-    end
-    object dxBarListItem: TdxBarListItem
-      Caption = #1054#1090#1082#1088#1099#1090#1099#1077' '#1086#1082#1085#1072
-      Category = 3
-      Visible = ivAlways
-      OnClick = dxBarListItemClick
-      OnGetData = dxBarListItemGetData
-      ShowCheck = True
     end
     object dxBarButton1: TdxBarButton
       Action = DM.ActDocInp
@@ -724,50 +722,86 @@ object FrmMain: TFrmMain
       Action = DM.ActDocMove
       Category = 2
     end
+    object dxBarListItem: TdxBarListItem
+      Caption = #1054#1090#1082#1088#1099#1090#1099#1077' '#1086#1082#1085#1072
+      Category = 3
+      Visible = ivAlways
+      OnClick = dxBarListItemClick
+      OnGetData = dxBarListItemGetData
+      ShowCheck = True
+    end
   end
   object dxDockingManager: TdxDockingManager
     Color = clBtnFace
+    DefaultHorizContainerSiteProperties.CustomCaptionButtons.Buttons = <>
     DefaultHorizContainerSiteProperties.Dockable = True
     DefaultHorizContainerSiteProperties.ImageIndex = -1
+    DefaultVertContainerSiteProperties.CustomCaptionButtons.Buttons = <>
     DefaultVertContainerSiteProperties.Dockable = True
     DefaultVertContainerSiteProperties.ImageIndex = -1
+    DefaultTabContainerSiteProperties.CustomCaptionButtons.Buttons = <>
     DefaultTabContainerSiteProperties.Dockable = True
     DefaultTabContainerSiteProperties.ImageIndex = -1
+    DefaultTabContainerSiteProperties.TabsProperties.CustomButtons.Buttons = <>
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    LookAndFeel.Kind = lfStandard
+    LookAndFeel.NativeStyle = False
     LookAndFeel.SkinName = 'Office2007Black'
-    LookAndFeel.SkinName = 'Office2007Black'
-    ViewStyle = vsStandard
     Left = 408
     Top = 240
+    PixelsPerInch = 96
   end
   object frxPDFExport1: TfrxPDFExport
     UseFileCache = True
     ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    OpenAfterExport = False
     PrintOptimized = False
     Outline = False
+    Background = False
+    HTMLTags = True
+    Quality = 95
+    Transparency = False
     Author = 'FastReport'
     Subject = 'FastReport PDF export'
-    Background = False
     Creator = 'FastReport (http://www.fast-report.com)'
-    HTMLTags = True
+    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
+    HideToolbar = False
+    HideMenubar = False
+    HideWindowUI = False
+    FitWindow = False
+    CenterWindow = False
+    PrintScaling = False
+    PdfA = False
     Left = 216
     Top = 168
   end
   object frxHTMLExport1: TfrxHTMLExport
     UseFileCache = True
     ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    OpenAfterExport = False
     FixedWidth = True
     Background = False
+    Centered = False
+    EmptyLines = True
+    Print = False
+    PictureType = gpPNG
     Left = 248
     Top = 168
   end
   object frxXLSExport1: TfrxXLSExport
     UseFileCache = True
     ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    ExportEMF = True
     OpenExcelAfterExport = True
     Wysiwyg = False
     AsText = True
@@ -782,18 +816,29 @@ object FrmMain: TFrmMain
   object frxXMLExport1: TfrxXMLExport
     UseFileCache = True
     ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
     Background = True
     Creator = 'FastReport'
     EmptyLines = True
     SuppressPageHeadersFooters = False
+    RowsCount = 0
+    Split = ssNotSplit
     Left = 312
     Top = 168
   end
   object frxRTFExport1: TfrxRTFExport
     UseFileCache = True
     ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    PictureType = gpPNG
+    OpenAfterExport = False
     Wysiwyg = True
     Creator = 'FastReport http://www.fast-report.com'
+    SuppressPageHeadersFooters = False
+    HeaderFooterMode = hfText
+    AutoSize = False
     Left = 344
     Top = 168
   end
@@ -823,8 +868,12 @@ object FrmMain: TFrmMain
     DefaultBottomMargin = 10.000000000000000000
     DefaultPaperSize = 9
     DefaultOrientation = poPortrait
+    GradientEnd = 11982554
+    GradientStart = clWindow
+    TemplatesExt = 'fr3'
     Restrictions = []
     RTLLanguage = False
+    MemoParentFont = False
     Left = 312
     Top = 128
   end

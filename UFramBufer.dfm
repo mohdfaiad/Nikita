@@ -105,6 +105,12 @@ object FramBufer: TFramBufer
         ExplicitHeight = 105
         Height = 105
         Width = 179
+        AnchorX = 91
+      end
+      inherited cxGrid1: TcxGrid
+        Top = 212
+        Width = 179
+        Height = 0
       end
     end
     inherited cxDBImage1: TcxDBImage
@@ -141,7 +147,7 @@ object FramBufer: TFramBufer
       OnDragDrop = cxGridDBTableViewBufferDragDrop
       OnDragOver = cxGridDBTableViewBufferDragOver
       OnKeyPress = cxGridDBTableViewBufferKeyPress
-      NavigatorButtons.ConfirmDelete = False
+      Navigator.Buttons.CustomButtons = <>
       DataController.DataSource = DSBuffer
       DataController.Summary.DefaultGroupSummaryItems = <
         item
@@ -156,8 +162,8 @@ object FramBufer: TFramBufer
       DataController.Summary.SummaryGroups = <>
       OptionsBehavior.IncSearch = True
       OptionsData.Inserting = False
-      OptionsSelection.InvertSelect = False
       OptionsSelection.MultiSelect = True
+      OptionsSelection.InvertSelect = False
       OptionsView.CellAutoHeight = True
       OptionsView.ColumnAutoWidth = True
       OptionsView.Footer = True
@@ -241,13 +247,11 @@ object FramBufer: TFramBufer
       FieldName = 'F_ID'
       Visible = False
       Size = 0
-      RoundByScale = True
     end
     object dsGoodBufferF_GOOD: TFIBBCDField
       FieldName = 'F_GOOD'
       Visible = False
       Size = 0
-      RoundByScale = True
     end
     object dsGoodBufferF_GOOD_NAME: TFIBStringField
       DisplayLabel = #1053#1072#1079#1074#1072#1085#1080#1077
@@ -272,7 +276,6 @@ object FramBufer: TFramBufer
   end
   object pFIBTransaction1: TpFIBTransaction
     DefaultDatabase = DM.pFIBDatabase
-    TimeoutAction = TARollback
     Left = 200
     Top = 176
   end

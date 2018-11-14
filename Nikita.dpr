@@ -87,7 +87,7 @@ uses
   UFrmDocView in 'UFrmDocView.pas' {FrmDocView},
   UFrmDocSpisan in 'UFrmDocSpisan.pas' {FrmDocSpisan},
   uDlgImportInputDoc in 'uDlgImportInputDoc.pas' {DlgImportInputDoc},
-  UMy_types in 'UMy_types.pas',
+  UMy_types in 'UMy_types.pas'{,
   DriverError in 'ShtrihDrv\DriverError.pas',
   DriverTypes in 'ShtrihDrv\DriverTypes.pas',
   DrvFRLib_TLB in 'ShtrihDrv\DrvFRLib_TLB.pas',

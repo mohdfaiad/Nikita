@@ -3,7 +3,7 @@ unit uAboutBox;
 interface
 
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls,
-  Buttons, ExtCtrls, pFIBScripter, ComCtrls, acPNG, FIBDatabase, pFIBDatabase,
+  Buttons, ExtCtrls, pFIBScripter, ComCtrls,{ acPNG,} FIBDatabase, pFIBDatabase,
   dialogs, IB_Services;
 
 type

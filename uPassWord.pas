@@ -3,7 +3,8 @@ unit uPassWord;
 interface
 
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls, 
-  Buttons, PropFilerEh, PropStorageEh, cxPropertiesStore,IniFiles, ExtCtrls;
+  Buttons, {PropFilerEh, PropStorageEh,} cxPropertiesStore,IniFiles, ExtCtrls,
+  cxClasses;
 
 type
   TPasswordDlg = class(TForm)

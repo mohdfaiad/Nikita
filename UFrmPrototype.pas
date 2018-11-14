@@ -8,7 +8,7 @@ uses
   pFIBDatabase, pFIBDataSet, frxClass,frxVariables, frxFIBComponents, frxDesgn,
   frxExportRTF, frxExportXML, frxExportXLS, frxExportHTML, frxExportPDF,
   frxCross, frxBarcode, frxDCtrl, RzForms, cxPropertiesStore,cxGridDBTableView,
-  cxCustomData, cxPc;
+  cxCustomData, cxPc, cxClasses;
 
 type
   TFrmPrototype = class(TForm)

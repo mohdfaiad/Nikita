@@ -30,8 +30,8 @@ object PasswordDlg: TPasswordDlg
   object Label3: TLabel
     Left = 5
     Top = 75
-    Width = 71
-    Height = 18
+    Width = 23
+    Height = 13
     Caption = #1041#1072#1079#1072
     OnDblClick = EdBaseDblClick
   end
@@ -110,7 +110,6 @@ object PasswordDlg: TPasswordDlg
     Width = 144
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 8
   end
   object cxPropertiesStore: TcxPropertiesStore

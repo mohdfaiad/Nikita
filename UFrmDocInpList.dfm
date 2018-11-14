@@ -2,8 +2,8 @@ inherited FrmListInputDocs: TFrmListInputDocs
   Caption = #1046#1091#1088#1085#1072#1083' '#1087#1088#1080#1093#1086#1076#1085#1099#1093' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
   ClientHeight = 333
   ClientWidth = 808
-  ExplicitWidth = 816
-  ExplicitHeight = 360
+  ExplicitWidth = 824
+  ExplicitHeight = 371
   PixelsPerInch = 96
   TextHeight = 13
   inherited RzStatusBar1: TRzStatusBar
@@ -194,10 +194,9 @@ inherited FrmListInputDocs: TFrmListInputDocs
       Align = alClient
       TabOrder = 1
       LookAndFeel.SkinName = 'MoneyTwins'
-      LookAndFeel.SkinName = 'MoneyTwins'
       object cxGrid1DBTableView1: TcxGridDBTableView
         OnDblClick = BtnEditClick
-        NavigatorButtons.ConfirmDelete = False
+        Navigator.Buttons.CustomButtons = <>
         DataController.DataSource = srDocList
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <
@@ -451,13 +450,14 @@ inherited FrmListInputDocs: TFrmListInputDocs
       PaperWidth = 210.000000000000000000
       PaperHeight = 297.000000000000000000
       PaperSize = 9
+      Frame.Typ = []
     end
   end
-  object OpenDialog: TOpenDialog [18]
+  object OpenDialog: TOpenDialog
     Left = 592
     Top = 168
   end
-  object dsImportDoc: TpFIBDataSet [19]
+  object dsImportDoc: TpFIBDataSet
     SelectSQL.Strings = (
       'SELECT'
       '    F_ID'

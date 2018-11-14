@@ -10,8 +10,9 @@ uses
   IdExplicitTLSClientServerBase, IdFTP, IdFTPList, cxEdit, cxEditRepositoryItems,
   SIBEABase, SIBFIBEA, IB_Services, IdIntercept, IdInterceptThrottler,UThrRefreshNsi,
   Provider, pFIBClientDataSet, DBClient, ExtCtrls, cxStyles, cxClasses,
-  cxGridTableView, StdActns, OverbyteIcsWndControl, OverbyteIcsFtpCli,
-  cxGraphics, cxGridCardView, cxVGrid, cxDropDownEdit, pFIBErrorHandler, fib;
+  cxGridTableView, StdActns,
+  cxGraphics, cxGridCardView, cxVGrid, cxDropDownEdit, pFIBErrorHandler, fib,
+  cxImageList, System.ImageList, System.Actions;
 
 type
   TDM = class(TDataModule)
@@ -125,7 +126,6 @@ type
     cxStyle24: TcxStyle;
     cxStyle25: TcxStyle;
     WindowCascade1: TWindowCascade;
-    FtpClient: TFtpClient;
     ImageListLage: TImageList;
     cxImageList1: TcxImageList;
     dsNsiGoodsF_MMEDIA: TFIBBlobField;
@@ -343,7 +343,7 @@ end;
 procedure RefreshDs( DS : TdataSet;FldName: string ='No'; key : integer = 0; fetch : boolean=false);
 var
   id,i  : integer;
-  pnt : pointer;
+  pnt : TbookMark;
   fieldName : string;
 begin
   id:=0;
@@ -587,12 +587,12 @@ begin
     dsPublicDS.SQLs.SelectSQL.Clear;
     dsPublicDS.SQLs.SelectSQL.Add('SELECT coalesce(param_value,''etalon-nsk.ru'') as param_value FROM SP_GET_SYS_PARAM(''ftp_host'')');
     dsPublicDS.Active:=true;
-    ftpClient.HostName:=dsPublicDS.FieldByName('param_value').AsString;
+//    ftpClient.HostName:=dsPublicDS.FieldByName('param_value').AsString;
     dsPublicDS.Active:=false;
     dsPublicDS.SQLs.SelectSQL.Clear;
     dsPublicDS.SQLs.SelectSQL.Add('SELECT coalesce(param_value,''21'') as param_value FROM SP_GET_SYS_PARAM(''ftp_port'')');
     dsPublicDS.Active:=true;
-    ftpClient.Port:=dsPublicDS.FieldByName('param_value').AsString;
+//    ftpClient.Port:=dsPublicDS.FieldByName('param_value').AsString;
     dsPublicDS.Active:=false;
     dsPublicDS.SQLs.SelectSQL.Clear;
     dsPublicDS.SQLs.SelectSQL.Add('SELECT coalesce(param_value,''/'') as param_value FROM SP_GET_SYS_PARAM(''ftp_path'')');
@@ -603,12 +603,12 @@ begin
     dsPublicDS.SQLs.SelectSQL.Clear;
     dsPublicDS.SQLs.SelectSQL.Add('SELECT coalesce(param_value,''etalon-nsk.ru'') as param_value FROM SP_GET_SYS_PARAM(''ftp_login'')');
     dsPublicDS.Active:=true;
-    ftpClient.UserName:=dsPublicDS.FieldByName('param_value').AsString;
+ //   ftpClient.UserName:=dsPublicDS.FieldByName('param_value').AsString;
     dsPublicDS.Active:=false;
     dsPublicDS.SQLs.SelectSQL.Clear;
     dsPublicDS.SQLs.SelectSQL.Add('SELECT coalesce(param_value,''etalon-nsk.ru'') as param_value FROM SP_GET_SYS_PARAM(''ftp_password'')');
     dsPublicDS.Active:=true;
-    ftpClient.PassWord:=dsPublicDS.FieldByName('param_value').AsString;
+{    ftpClient.PassWord:=dsPublicDS.FieldByName('param_value').AsString;
     try
       if not ftpClient.Connected then
       begin
@@ -620,7 +620,7 @@ begin
       CreateDir(Prg_PAth+'\photo');
 
     except
-    end;
+    end;  }
   end;
 
   LogMsg('Начинаем загрузку номенклатуры');
@@ -694,7 +694,7 @@ begin
     dsPublicDS.Active:=true;
     ftpClient.PassWord:=dsPublicDS.FieldByName('param_value').AsString;
 }
-  if ftpClient.Connected then
+{  if ftpClient.Connected then
   begin
     try
 
@@ -707,17 +707,13 @@ begin
       if ftpClient.Get then
       begin
 
-{      if not IdFTP.Connected then
-       IdFTP.Connect;
-      AssErt(IdFTP.Connected);
-      IdFTP.ChangeDir('/');// Установить папку на сервере}
 
-{      AFList:=TIdFTPListItems.Create;
+      AFList:=TIdFTPListItems.Create;
 
       IdFTP.ExtListItem(AFList,str);
       if AFList.Count>0 then
       begin
-        IdFTP.Get(str,Prg_PAth+'\photo\'+str,true);//Файл Откуда-Куда}
+        IdFTP.Get(str,Prg_PAth+'\photo\'+str,true);//Файл Откуда-Куда
         spImportPictures.ParamByName('F_article').Value:=GoodNode.ChildNodes['f_article'].Text;
         spImportPictures.ParamByName('F_mmedia').LoadFromFile(Prg_PAth+'\photo\'+str);
         spImportPictures.ExecProc;
@@ -728,11 +724,11 @@ begin
         LogMsg(ftpClient.ErrorMessage);
       end;
     except
-    end;
+    end;}
 {    if IdFTP.Connected then
-     IdFTP.Disconnect;}
+     IdFTP.Disconnect;
 //    AFList.Free;
-  end;
+  end; }
   dsPublicDS.Active:=false;
   dsPublicDS.SQLs.SelectSQL.Clear;
   result:=dsImportNsiGood.FieldByName('f_good_id').AsInteger;

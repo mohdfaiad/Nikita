@@ -5,6 +5,7 @@ object FramGoodCard: TFramGoodCard
   Height = 262
   Align = alBottom
   TabOrder = 0
+  ExplicitTop = 42
   object Panel4: TPanel
     Left = 201
     Top = 0
@@ -57,6 +58,7 @@ object FramGoodCard: TFramGoodCard
       StyleHot.LookAndFeel.SkinName = ''
       Height = 56
       Width = 248
+      AnchorX = 125
     end
     object cxGrid1: TcxGrid
       Left = 1
@@ -66,18 +68,17 @@ object FramGoodCard: TFramGoodCard
       Align = alClient
       TabOrder = 3
       LookAndFeel.SkinName = 'MoneyTwins'
-      LookAndFeel.SkinName = 'MoneyTwins'
       object cxGrid1DBTableView1: TcxGridDBTableView
-        NavigatorButtons.ConfirmDelete = False
-        NavigatorButtons.Insert.Visible = False
-        NavigatorButtons.Append.Visible = False
-        NavigatorButtons.Delete.Visible = False
-        NavigatorButtons.Edit.Visible = False
+        Navigator.Buttons.CustomButtons = <>
+        Navigator.Buttons.Insert.Visible = False
+        Navigator.Buttons.Append.Visible = False
+        Navigator.Buttons.Delete.Visible = False
+        Navigator.Buttons.Edit.Visible = False
+        Navigator.Visible = True
         DataController.DataSource = srGoodsDopInfo
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
         DataController.Summary.SummaryGroups = <>
-        OptionsView.Navigator = True
         OptionsView.CellAutoHeight = True
         OptionsView.ColumnAutoWidth = True
         OptionsView.GroupByBox = False
@@ -112,8 +113,8 @@ object FramGoodCard: TFramGoodCard
     Align = alLeft
     DataBinding.DataField = 'F_MEMO'
     DataBinding.DataSource = srGetGoodsInfo
-    Properties.GraphicClassName = 'TJPEGImage'
-    Properties.Stretch = True
+    Properties.FitMode = ifmProportionalStretch
+    Properties.GraphicClassName = 'TdxSmartImage'
     TabOrder = 1
     Height = 262
     Width = 201

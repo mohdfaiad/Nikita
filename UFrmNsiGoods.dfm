@@ -3,8 +3,8 @@ inherited FrmNsiGoods: TFrmNsiGoods
   ClientHeight = 622
   ClientWidth = 1039
   OnActivate = FormActivate
-  ExplicitWidth = 1047
-  ExplicitHeight = 649
+  ExplicitWidth = 1055
+  ExplicitHeight = 660
   PixelsPerInch = 96
   TextHeight = 13
   inherited RzStatusBar1: TRzStatusBar
@@ -73,52 +73,37 @@ inherited FrmNsiGoods: TFrmNsiGoods
         Top = 54
         Width = 231
         Height = 547
-        LookAndFeel.SkinName = 'MoneyTwins'
         ExplicitTop = 54
         ExplicitWidth = 231
         ExplicitHeight = 547
-        ClientRectBottom = 545
-        ClientRectRight = 229
+        ClientRectBottom = 543
+        ClientRectRight = 227
         inherited cxTabSheetGrp: TcxTabSheet
-          ExplicitLeft = 2
-          ExplicitTop = 25
-          ExplicitWidth = 227
-          ExplicitHeight = 520
+          ExplicitWidth = 223
+          ExplicitHeight = 519
           inherited cxDBTreeList: TcxDBTreeList
-            Width = 227
-            Height = 520
-            LookAndFeel.SkinName = 'MoneyTwins'
+            Width = 223
+            Height = 519
             OptionsSelection.CellSelect = True
             OptionsSelection.InvertSelect = True
             OptionsView.Indicator = True
             OnDragDrop = FramNsiGoodsGrp1cxDBTreeListDragDrop
             OnDragOver = FramNsiGoodsGrp1cxDBTreeListDragOver
             OnSelectionChanged = FramNsiGoodsGrp1cxDBTreeListSelectionChanged
-            ExplicitTop = 0
-            ExplicitWidth = 227
-            ExplicitHeight = 520
+            ExplicitWidth = 223
+            ExplicitHeight = 519
+            inherited cxDBTreeList1F_ID: TcxDBTreeListColumn
+              Position.ColIndex = 3
+            end
             inherited cxDBTreeList1F_PARENT: TcxDBTreeListColumn
-              Position.ColIndex = 0
+              Position.ColIndex = 2
             end
             inherited cxDBTreeList1F_NAME: TcxDBTreeListColumn
-              Position.ColIndex = 0
+              Position.ColIndex = 1
             end
             inherited cxDBTreeList1F_COLOR: TcxDBTreeListColumn
               Position.ColIndex = 0
             end
-          end
-        end
-        inherited cxTabSheetGrpExt: TcxTabSheet
-          ExplicitLeft = 2
-          ExplicitTop = 25
-          ExplicitWidth = 570
-          ExplicitHeight = 390
-          inherited cxDBTreeList1: TcxDBTreeList
-            Width = 227
-            Height = 520
-            LookAndFeel.SkinName = 'MoneyTwins'
-            ExplicitWidth = 227
-            ExplicitHeight = 520
           end
         end
       end
@@ -267,15 +252,15 @@ inherited FrmNsiGoods: TFrmNsiGoods
       DragMode = dmAutomatic
       TabOrder = 0
       LookAndFeel.SkinName = 'MoneyTwins'
-      LookAndFeel.SkinName = 'MoneyTwins'
       object cxGrid1DBTableView1: TcxGridDBTableView
         OnDblClick = cxGrid1DBTableView1DblClick
         OnKeyPress = cxGrid1DBTableView1KeyPress
-        NavigatorButtons.ConfirmDelete = False
-        NavigatorButtons.Refresh.Visible = False
-        NavigatorButtons.SaveBookmark.Visible = False
-        NavigatorButtons.GotoBookmark.Visible = False
-        NavigatorButtons.Filter.Visible = False
+        Navigator.Buttons.CustomButtons = <>
+        Navigator.Buttons.Refresh.Visible = False
+        Navigator.Buttons.SaveBookmark.Visible = False
+        Navigator.Buttons.GotoBookmark.Visible = False
+        Navigator.Buttons.Filter.Visible = False
+        Navigator.Visible = True
         OnCustomDrawCell = cxGrid1DBTableView1CustomDrawCell
         DataController.DataModeController.GridMode = True
         DataController.DataModeController.GridModeBufferCount = 50
@@ -297,7 +282,6 @@ inherited FrmNsiGoods: TFrmNsiGoods
         OptionsData.Editing = False
         OptionsSelection.MultiSelect = True
         OptionsView.FocusRect = False
-        OptionsView.Navigator = True
         OptionsView.CellAutoHeight = True
         OptionsView.ColumnAutoWidth = True
         OptionsView.GroupByBox = False
@@ -347,9 +331,9 @@ inherited FrmNsiGoods: TFrmNsiGoods
         object cxGrid1DBTableView1F_MMEDIA: TcxGridDBColumn
           DataBinding.FieldName = 'F_MMEDIA'
           PropertiesClassName = 'TcxImageProperties'
-          Properties.GraphicClassName = 'TJPEGImage'
+          Properties.FitMode = ifmProportionalStretch
+          Properties.GraphicClassName = 'TdxSmartImage'
           Properties.ReadOnly = True
-          Properties.Stretch = True
           Visible = False
           IsCaptionAssigned = True
         end
@@ -367,7 +351,7 @@ inherited FrmNsiGoods: TFrmNsiGoods
       object cxGrid1DBCardView1: TcxGridDBCardView
         OnDblClick = cxGrid1DBTableView1DblClick
         OnKeyPress = cxGrid1DBTableView1KeyPress
-        NavigatorButtons.ConfirmDelete = False
+        Navigator.Buttons.CustomButtons = <>
         DataController.DataModeController.GridMode = True
         DataController.DataSource = srNsiGoods
         DataController.Summary.DefaultGroupSummaryItems = <>
@@ -379,6 +363,7 @@ inherited FrmNsiGoods: TFrmNsiGoods
         OptionsData.Editing = False
         OptionsSelection.MultiSelect = True
         OptionsView.CardAutoWidth = True
+        OptionsView.CardIndent = 7
         OptionsView.CardWidth = 150
         OptionsView.CellAutoHeight = True
         OptionsView.EmptyRows = False
@@ -438,8 +423,8 @@ inherited FrmNsiGoods: TFrmNsiGoods
           DataBinding.FieldName = 'F_MMEDIA'
           PropertiesClassName = 'TcxImageProperties'
           Properties.Caption = #1053#1077#1090' '#1082#1072#1088#1090#1080#1085#1082#1080
-          Properties.GraphicClassName = 'TJPEGImage'
-          Properties.Stretch = True
+          Properties.FitMode = ifmProportionalStretch
+          Properties.GraphicClassName = 'TdxSmartImage'
           Options.Editing = False
           Options.ShowCaption = False
           Position.BeginsLayer = True
@@ -484,11 +469,11 @@ inherited FrmNsiGoods: TFrmNsiGoods
           StyleHot.LookAndFeel.SkinName = ''
           ExplicitWidth = 441
           Width = 441
+          AnchorX = 222
         end
         inherited cxGrid1: TcxGrid
           Width = 441
           Height = 101
-          LookAndFeel.SkinName = 'MoneyTwins'
           ExplicitWidth = 441
           ExplicitHeight = 101
         end
@@ -569,6 +554,7 @@ inherited FrmNsiGoods: TFrmNsiGoods
         Top = 4
         Width = 268
         Height = 21
+        Text = ''
         TabOrder = 0
         OnChange = RzEditFindChange
         OnKeyUp = RzEditFindKeyUp

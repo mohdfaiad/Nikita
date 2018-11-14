@@ -41,6 +41,7 @@ object FrmPrototype: TFrmPrototype
       Height = 19
       Align = alLeft
       Visible = False
+      Caption = ''
       ExplicitLeft = 426
       ExplicitHeight = 20
     end
@@ -58,7 +59,7 @@ object FrmPrototype: TFrmPrototype
       Left = 1
       Top = 1
       Width = 613
-      Height = 25
+      Height = 29
       Images = DM.ImageList
       AutoSize = True
       BorderInner = fsNone
@@ -86,7 +87,7 @@ object FrmPrototype: TFrmPrototype
         BtnExit)
       object BtnNew: TRzToolButton
         Left = 4
-        Top = 0
+        Top = 2
         Hint = #1057#1086#1079#1076#1072#1090#1100
         DisabledIndex = 1
         ImageIndex = 0
@@ -96,7 +97,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnOpen: TRzToolButton
         Left = 79
-        Top = 0
+        Top = 2
         Hint = #1054#1090#1082#1088#1099#1090#1100
         DisabledIndex = 3
         ImageIndex = 2
@@ -107,7 +108,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnFind: TRzToolButton
         Left = 129
-        Top = 0
+        Top = 2
         Hint = #1048#1089#1082#1072#1090#1100
         DisabledIndex = 21
         ImageIndex = 20
@@ -119,7 +120,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnPrint: TRzToolButton
         Left = 154
-        Top = 0
+        Top = 2
         Width = 39
         Hint = #1055#1077#1095#1072#1090#1072#1090#1100
         DisabledIndex = 19
@@ -133,7 +134,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnOK: TRzToolButton
         Left = 193
-        Top = 0
+        Top = 2
         Hint = #1055#1086#1076#1090#1074#1077#1088#1076#1080#1090#1100
         DisabledIndex = 7
         ImageIndex = 6
@@ -144,7 +145,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnCancel: TRzToolButton
         Left = 218
-        Top = 0
+        Top = 2
         Hint = #1054#1090#1084#1077#1085#1080#1090#1100
         DisabledIndex = 23
         ImageIndex = 22
@@ -155,7 +156,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnRefresh: TRzToolButton
         Left = 104
-        Top = 0
+        Top = 2
         Hint = #1054#1073#1085#1086#1074#1080#1090#1100
         DisabledIndex = 15
         ImageIndex = 14
@@ -166,7 +167,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnEdit: TRzToolButton
         Left = 29
-        Top = 0
+        Top = 2
         Hint = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
         DisabledIndex = 17
         ImageIndex = 16
@@ -178,7 +179,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnExecute: TRzToolButton
         Left = 243
-        Top = 0
+        Top = 2
         Hint = #1042#1099#1087#1086#1083#1085#1080#1090#1100
         DisabledIndex = 9
         ImageIndex = 8
@@ -189,7 +190,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnDelete: TRzToolButton
         Left = 268
-        Top = 0
+        Top = 2
         Hint = #1059#1076#1072#1083#1080#1090#1100
         DisabledIndex = 11
         ImageIndex = 10
@@ -202,7 +203,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnSave: TRzToolButton
         Left = 293
-        Top = 0
+        Top = 2
         Hint = #1057#1086#1093#1088#1072#1085#1080#1090#1100
         DisabledIndex = 5
         ImageIndex = 4
@@ -212,7 +213,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnExit: TRzToolButton
         Left = 318
-        Top = 0
+        Top = 2
         DisabledIndex = 13
         ImageIndex = 12
         Caption = 'Exit'
@@ -221,7 +222,7 @@ object FrmPrototype: TFrmPrototype
       end
       object BtnView: TRzToolButton
         Left = 54
-        Top = 0
+        Top = 2
         DisabledIndex = 39
         ImageIndex = 38
         Caption = #1055#1088#1086#1089#1084#1086#1090#1088#1077#1090#1100
@@ -238,7 +239,7 @@ object FrmPrototype: TFrmPrototype
     end
   end
   object frxReport2: TfrxReport
-    Version = '3.21'
+    Version = '6.0.7'
     DotMatrixReport = True
     EngineOptions.DoublePass = True
     EngineOptions.PrintIfEmpty = False
@@ -248,6 +249,7 @@ object FrmPrototype: TFrmPrototype
     PreviewOptions.ShowCaptions = True
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 40322.541668425930000000
     ReportOptions.LastChange = 40322.541668425930000000
     ScriptLanguage = 'PascalScript'
