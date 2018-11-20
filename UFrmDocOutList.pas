@@ -13,7 +13,23 @@ uses
   frxClass, frxExportPDF, frxCross, frxBarcode, frxDCtrl, frxDesgn,
   frxFIBComponents,xmldom, XMLIntf, msxmldom,XMLDoc, FIBQuery, pFIBQuery,
   pFIBStoredProc, cxPropertiesStore, StdCtrls, ComCtrls, ToolWin,
-  cxColorComboBox, cxCheckBox;
+  cxColorComboBox, cxCheckBox, cxLookAndFeels, cxLookAndFeelPainters,
+  dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee,
+  dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
+  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast,
+  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
+  dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins,
+  dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
+  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
+  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray,
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful,
+  dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
+  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog;
 
 type
   TFrmDocOutList = class(TFrmPrototype)
@@ -30,28 +46,28 @@ type
     dsDocListF_SKLAD_NAME: TFIBStringField;
     dsDocListF_PARTNER_NAME: TFIBStringField;
     srDocList: TDataSource;
-    cxGrid1DBTableView1F_PARTNER: TcxGridDBColumn;
-    cxGrid1DBTableView1F_NUMBER: TcxGridDBColumn;
-    cxGrid1DBTableView1F_DATE: TcxGridDBColumn;
-    cxGrid1DBTableView1F_STATE: TcxGridDBColumn;
-    cxGrid1DBTableView1F_STATE_NAME: TcxGridDBColumn;
-    cxGrid1DBTableView1F_SKLAD_NAME: TcxGridDBColumn;
-    cxGrid1DBTableView1F_PARTNER_NAME: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PARTNER1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_NUMBER1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DATE1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_STATE1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_STATE_NAME1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_SKLAD_NAME1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PARTNER_NAME1: TcxGridDBColumn;
     dsDocListF_SKLAD: TFIBBCDField;
-    cxGrid1DBTableView1F_SKLAD: TcxGridDBColumn;
+    cxGrid1DBTableView1F_SKLAD1: TcxGridDBColumn;
     dsDocListF_DOC_COUNT: TFIBFloatField;
     dsDocListF_DOC_SUM: TFIBBCDField;
-    cxGrid1DBTableView1F_DOC_COUNT: TcxGridDBColumn;
-    cxGrid1DBTableView1F_DOC_SUM: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DOC_COUNT1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DOC_SUM1: TcxGridDBColumn;
     dsExportDoc: TpFIBDataSet;
     dsExportDocF_VALUE: TFIBStringField;
     SaveDialog: TSaveDialog;
     dsDocListF_DOC_SKIDKA: TFIBBCDField;
-    cxGrid1DBTableView1F_DOC_SKIDKA: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DOC_SKIDKA1: TcxGridDBColumn;
     OpenDialog: TOpenDialog;
     dsImportDoc: TpFIBDataSet;
     dsDocListF_PAYDATE_PLAN: TFIBDateField;
-    cxGrid1DBTableView1F_PAYDATE_PLAN: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PAYDATE_PLAN1: TcxGridDBColumn;
     NewDocMenu: TPopupMenu;
     N1: TMenuItem;
     N2: TMenuItem;
@@ -62,25 +78,25 @@ type
     dsExportPriceF_VALUE: TFIBStringField;
     dsDocListF_PRICE_NAME: TFIBStringField;
     dsDocListF_DOC_SKIDKA_PERCENT: TFIBBCDField;
-    cxGrid1DBTableView1F_PRICE_NAME: TcxGridDBColumn;
-    cxGrid1DBTableView1F_DOC_SKIDKA_PERCENT: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PRICE_NAME1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DOC_SKIDKA_PERCENT1: TcxGridDBColumn;
     spInsDocStr: TpFIBStoredProc;
     N6: TMenuItem;
     dsDocListF_DOC_OUT: TFIBBCDField;
-    cxGrid1DBTableView1F_DOC_OUT: TcxGridDBColumn;
+    cxGrid1DBTableView1F_DOC_OUT1: TcxGridDBColumn;
     dsDocListF_PAY_SUM: TFIBBCDField;
-    cxGrid1DBTableView1F_PAY_SUM: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PAY_SUM1: TcxGridDBColumn;
     ToolBar1: TToolBar;
     Editstr_date: TDateTimePicker;
     Editend_date: TDateTimePicker;
     dsDocListTYPE: TFIBStringField;
-    cxGrid1DBTableView1TYPE: TcxGridDBColumn;
+    cxGrid1DBTableView1TYPE1: TcxGridDBColumn;
     dsDocListF_PAY_TYPE: TFIBBCDField;
     dsDocListF_USER: TFIBStringField;
-    cxGrid1DBTableView1F_PAY_TYPE: TcxGridDBColumn;
-    cxGrid1DBTableView1F_USER: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PAY_TYPE1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_USER1: TcxGridDBColumn;
     dsDocListF_PROPERTY_1: TFIBStringField;
-    cxGrid1DBTableView1F_PROPERTY_1: TcxGridDBColumn;
+    cxGrid1DBTableView1F_PROPERTY_11: TcxGridDBColumn;
     procedure BtnRefreshClick(Sender: TObject);
     procedure BtnNewClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);

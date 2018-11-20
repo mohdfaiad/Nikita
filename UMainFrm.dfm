@@ -85,9 +85,6 @@ object FrmMain: TFrmMain
     ParentBackground = False
     TabOrder = 2
     Visible = False
-    ExplicitLeft = -28
-    ExplicitTop = 116
-    ExplicitHeight = 63
     inline FramBufer1: TFramBufer
       Left = 1
       Top = 1
@@ -114,7 +111,7 @@ object FrmMain: TFrmMain
       inherited FramGoodCard1: TFramGoodCard
         Top = 215
         Width = 330
-        ExplicitTop = -152
+        ExplicitTop = 215
         ExplicitWidth = 330
         inherited Panel4: TPanel
           Width = 129
@@ -139,9 +136,7 @@ object FrmMain: TFrmMain
           end
           inherited cxGrid1: TcxGrid
             Width = 127
-            ExplicitTop = 212
             ExplicitWidth = 127
-            ExplicitHeight = 0
           end
         end
         inherited dsGetGoodsInfo: TpFIBDataSet
@@ -152,7 +147,7 @@ object FrmMain: TFrmMain
         Width = 330
         Height = 167
         ExplicitWidth = 330
-        ExplicitHeight = 177
+        ExplicitHeight = 167
         inherited cxGridDBTableViewBuffer: TcxGridDBTableView
           DataController.Summary.DefaultGroupSummaryItems = <
             item
@@ -194,8 +189,6 @@ object FrmMain: TFrmMain
     Properties.Options = [pcoAlwaysShowGoDialogButton, pcoCloseButton, pcoGradient, pcoGradientClientArea, pcoRedrawOnResize]
     LookAndFeel.Kind = lfFlat
     LookAndFeel.SkinName = 'MoneyTwins'
-    ExplicitTop = 116
-    ExplicitHeight = 440
     ClientRectBottom = 426
     ClientRectLeft = 4
     ClientRectRight = 519
@@ -778,8 +771,8 @@ object FrmMain: TFrmMain
     CenterWindow = False
     PrintScaling = False
     PdfA = False
-    Left = 216
-    Top = 168
+    Left = 160
+    Top = 176
   end
   object frxHTMLExport1: TfrxHTMLExport
     UseFileCache = True
@@ -793,25 +786,8 @@ object FrmMain: TFrmMain
     EmptyLines = True
     Print = False
     PictureType = gpPNG
-    Left = 248
-    Top = 168
-  end
-  object frxXLSExport1: TfrxXLSExport
-    UseFileCache = True
-    ShowProgress = True
-    OverwritePrompt = False
-    DataOnly = False
-    ExportEMF = True
-    OpenExcelAfterExport = True
-    Wysiwyg = False
-    AsText = True
-    Background = False
-    FastExport = True
-    PageBreaks = True
-    EmptyLines = True
-    SuppressPageHeadersFooters = False
-    Left = 280
-    Top = 168
+    Left = 160
+    Top = 224
   end
   object frxXMLExport1: TfrxXMLExport
     UseFileCache = True
@@ -825,7 +801,7 @@ object FrmMain: TFrmMain
     RowsCount = 0
     Split = ssNotSplit
     Left = 312
-    Top = 168
+    Top = 176
   end
   object frxRTFExport1: TfrxRTFExport
     UseFileCache = True
@@ -839,7 +815,7 @@ object FrmMain: TFrmMain
     SuppressPageHeadersFooters = False
     HeaderFooterMode = hfText
     AutoSize = False
-    Left = 344
+    Left = 416
     Top = 168
   end
   object frxCrossObject1: TfrxCrossObject
@@ -880,5 +856,78 @@ object FrmMain: TFrmMain
   object frxBarCodeObject1: TfrxBarCodeObject
     Left = 344
     Top = 128
+  end
+  object frxXLSXExport1: TfrxXLSXExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    ChunkSize = 0
+    OpenAfterExport = False
+    PictureType = gpPNG
+    Left = 280
+    Top = 398
+  end
+  object frxHTML5DivExport1: TfrxHTML5DivExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    OpenAfterExport = False
+    MultiPage = False
+    Formatted = False
+    PictureFormat = pfPNG
+    UnifiedPictures = True
+    Navigation = True
+    EmbeddedPictures = True
+    EmbeddedCSS = True
+    HTML5 = True
+    AllPictures = False
+    ExportAnchors = True
+    PictureTag = 0
+    Left = 360
+    Top = 398
+  end
+  object frxODSExport1: TfrxODSExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    CreationTime = 0.000000000000000000
+    DataOnly = False
+    PictureType = gpPNG
+    OpenAfterExport = False
+    Background = True
+    Creator = 'FastReport'
+    SingleSheet = False
+    Language = 'en'
+    SuppressPageHeadersFooters = False
+    Left = 192
+    Top = 398
+  end
+  object frxPPTXExport1: TfrxPPTXExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    OpenAfterExport = False
+    PictureType = gpPNG
+    Left = 184
+    Top = 454
+  end
+  object frxODTExport1: TfrxODTExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    CreationTime = 0.000000000000000000
+    DataOnly = False
+    PictureType = gpPNG
+    OpenAfterExport = False
+    Background = True
+    Creator = 'FastReport'
+    SingleSheet = False
+    Language = 'en'
+    SuppressPageHeadersFooters = False
+    Left = 272
+    Top = 454
   end
 end

@@ -105,7 +105,7 @@ begin
             ARowIndex:=cxGrid1DBTableView1.DataController.GetSelectedRowIndex(i);
             ARowInfo:=cxGrid1DBTableView1.DataController.GetRowInfo(ARowIndex);
 
-            result[i]:=cxGrid1DBTableView1.DataController.GetRowValue(ARowInfo,cxGrid1DBTableView1F_DOC_OUT.Index);
+            result[i]:=cxGrid1DBTableView1.DataController.GetRowValue(ARowInfo,cxGrid1DBTableView1F_DOC_OUT1.Index);
           end;
         end
         else

@@ -30,7 +30,8 @@ uses
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, dxRibbonCustomizationForm, dxBarBuiltInMenu,
-  frxExportBaseDialog;
+  frxExportBaseDialog, frxExportXLSX, frxExportODF, frxExportPPTX,
+  frxExportHelpers, frxExportHTMLDiv;
 
 type
   TFrmMain = class(TForm)
@@ -113,7 +114,6 @@ type
     dxRibbon1Tab2: TdxRibbonTab;
     frxPDFExport1: TfrxPDFExport;
     frxHTMLExport1: TfrxHTMLExport;
-    frxXLSExport1: TfrxXLSExport;
     frxXMLExport1: TfrxXMLExport;
     frxRTFExport1: TfrxRTFExport;
     frxCrossObject1: TfrxCrossObject;
@@ -127,6 +127,11 @@ type
     dxBarRoznMove: TdxBarLargeButton;
     dxBarButton30: TdxBarButton;
     dxBarLargeButton1: TdxBarLargeButton;
+    frxXLSXExport1: TfrxXLSXExport;
+    frxHTML5DivExport1: TfrxHTML5DivExport;
+    frxODSExport1: TfrxODSExport;
+    frxPPTXExport1: TfrxPPTXExport;
+    frxODTExport1: TfrxODTExport;
     procedure dxBarListItemGetData(Sender: TObject);
     procedure dxBarListItemClick(Sender: TObject);
     procedure N16Click(Sender: TObject);

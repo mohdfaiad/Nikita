@@ -12,7 +12,7 @@ uses
   Provider, pFIBClientDataSet, DBClient, ExtCtrls, cxStyles, cxClasses,
   cxGridTableView, StdActns,
   cxGraphics, cxGridCardView, cxVGrid, cxDropDownEdit, pFIBErrorHandler, fib,
-  cxImageList, System.ImageList, System.Actions;
+  cxImageList, System.ImageList, System.Actions, cxLocalization;
 
 type
   TDM = class(TDataModule)

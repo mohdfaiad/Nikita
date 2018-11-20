@@ -1,14 +1,14 @@
 inherited FrmListInputDocs: TFrmListInputDocs
   Caption = #1046#1091#1088#1085#1072#1083' '#1087#1088#1080#1093#1086#1076#1085#1099#1093' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
-  ClientHeight = 333
-  ClientWidth = 808
-  ExplicitWidth = 824
-  ExplicitHeight = 371
+  ClientHeight = 608
+  ClientWidth = 1031
+  ExplicitWidth = 1047
+  ExplicitHeight = 646
   PixelsPerInch = 96
   TextHeight = 13
   inherited RzStatusBar1: TRzStatusBar
-    Top = 225
-    Width = 808
+    Top = 500
+    Width = 1031
     ExplicitTop = 225
     ExplicitWidth = 808
     inherited DsFormName: TRzStatusPane
@@ -16,13 +16,13 @@ inherited FrmListInputDocs: TFrmListInputDocs
     end
   end
   inherited Panel3: TPanel
-    Width = 808
-    Height = 225
-    ExplicitWidth = 808
-    ExplicitHeight = 225
+    Width = 1031
+    Height = 500
+    ExplicitWidth = 1031
+    ExplicitHeight = 500
     inherited RzToolbar: TRzToolbar
-      Width = 806
-      Height = 80
+      Width = 1029
+      Height = 40
       RowHeight = 40
       ButtonLayout = blGlyphTop
       ButtonWidth = 60
@@ -31,8 +31,8 @@ inherited FrmListInputDocs: TFrmListInputDocs
       TextOptions = ttoCustom
       ParentShowHint = False
       Transparent = True
-      ExplicitWidth = 806
-      ExplicitHeight = 80
+      ExplicitWidth = 1029
+      ExplicitHeight = 40
       ToolbarControls = (
         BtnNew
         BtnEdit
@@ -164,11 +164,11 @@ inherited FrmListInputDocs: TFrmListInputDocs
         ExplicitHeight = 40
       end
       inherited BtnExit: TRzToolButton
-        Left = 4
-        Top = 40
+        Left = 786
+        Top = 0
         Layout = blGlyphTop
-        ExplicitLeft = 4
-        ExplicitTop = 40
+        ExplicitLeft = 786
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
@@ -188,12 +188,15 @@ inherited FrmListInputDocs: TFrmListInputDocs
     end
     object cxGrid1: TcxGrid
       Left = 1
-      Top = 110
-      Width = 806
-      Height = 114
+      Top = 70
+      Width = 1029
+      Height = 429
       Align = alClient
       TabOrder = 1
       LookAndFeel.SkinName = 'MoneyTwins'
+      ExplicitTop = 110
+      ExplicitWidth = 806
+      ExplicitHeight = 114
       object cxGrid1DBTableView1: TcxGridDBTableView
         OnDblClick = BtnEditClick
         Navigator.Buttons.CustomButtons = <>
@@ -282,14 +285,16 @@ inherited FrmListInputDocs: TFrmListInputDocs
     end
     object ToolBar1: TToolBar
       Left = 1
-      Top = 81
-      Width = 806
+      Top = 41
+      Width = 1029
       Height = 29
       Caption = 'ToolBar1'
       DrawingStyle = dsGradient
       GradientEndColor = clWhite
       GradientStartColor = clGradientActiveCaption
       TabOrder = 2
+      ExplicitTop = 81
+      ExplicitWidth = 806
       object Editstr_date: TDateTimePicker
         Left = 0
         Top = 0
@@ -312,13 +317,15 @@ inherited FrmListInputDocs: TFrmListInputDocs
   end
   object MemoLog: TMemo [2]
     Left = 0
-    Top = 244
-    Width = 808
+    Top = 519
+    Width = 1031
     Height = 89
     Align = alBottom
     ScrollBars = ssVertical
     TabOrder = 2
     Visible = False
+    ExplicitTop = 244
+    ExplicitWidth = 808
   end
   object dsDocList: TpFIBDataSet [4]
     DeleteSQL.Strings = (

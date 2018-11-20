@@ -1,15 +1,15 @@
 inherited FrmDocOutList: TFrmDocOutList
   Caption = #1046#1091#1088#1085#1072#1083' '#1088#1072#1089#1093#1086#1076#1085#1099#1093' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
-  ClientHeight = 432
-  ClientWidth = 1000
+  ClientHeight = 782
+  ClientWidth = 1112
   OnKeyUp = FormKeyUp
-  ExplicitWidth = 1008
-  ExplicitHeight = 459
+  ExplicitWidth = 1128
+  ExplicitHeight = 820
   PixelsPerInch = 96
   TextHeight = 13
   inherited RzStatusBar1: TRzStatusBar
-    Top = 413
-    Width = 1000
+    Top = 763
+    Width = 1112
     ExplicitTop = 413
     ExplicitWidth = 1000
     inherited DsFormName: TRzStatusPane
@@ -17,12 +17,12 @@ inherited FrmDocOutList: TFrmDocOutList
     end
   end
   inherited Panel3: TPanel
-    Width = 1000
-    Height = 413
-    ExplicitWidth = 1000
+    Width = 1112
+    Height = 763
+    ExplicitWidth = 1112
     ExplicitHeight = 413
     inherited RzToolbar: TRzToolbar
-      Width = 998
+      Width = 1110
       Height = 40
       ButtonLayout = blGlyphTop
       ButtonWidth = 60
@@ -30,7 +30,7 @@ inherited FrmDocOutList: TFrmDocOutList
       ShowButtonCaptions = True
       TextOptions = ttoCustom
       ParentShowHint = False
-      ExplicitWidth = 998
+      ExplicitWidth = 1110
       ExplicitHeight = 40
       ToolbarControls = (
         BtnNew
@@ -47,95 +47,116 @@ inherited FrmDocOutList: TFrmDocOutList
         BtnSave
         BtnExit)
       inherited BtnNew: TRzToolButton
+        Top = 0
         Width = 74
         Height = 40
         DropDownMenu = NewDocMenu
         Layout = blGlyphTop
         ToolStyle = tsDropDown
+        ExplicitTop = 0
         ExplicitWidth = 74
         ExplicitHeight = 40
       end
       inherited BtnOpen: TRzToolButton
         Left = 239
+        Top = 0
         Layout = blGlyphTop
         Enabled = True
         OnClick = BtnOpenClick
         ExplicitLeft = 239
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnFind: TRzToolButton
         Left = 359
+        Top = 0
         Layout = blGlyphTop
         ExplicitLeft = 359
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnPrint: TRzToolButton
         Left = 419
+        Top = 0
         Width = 74
         Height = 40
         Layout = blGlyphTop
         ExplicitLeft = 419
+        ExplicitTop = 0
         ExplicitWidth = 74
         ExplicitHeight = 40
       end
       inherited BtnOK: TRzToolButton
         Left = 493
+        Top = 0
         Layout = blGlyphTop
         ExplicitLeft = 493
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnCancel: TRzToolButton
         Left = 553
+        Top = 0
         Layout = blGlyphTop
         ShowCaption = True
         UseToolbarShowCaption = False
         ExplicitLeft = 553
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnRefresh: TRzToolButton
         Left = 299
+        Top = 0
         Layout = blGlyphTop
         Enabled = True
         OnClick = BtnRefreshClick
         ExplicitLeft = 299
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnEdit: TRzToolButton
         Left = 78
+        Top = 0
         Width = 87
         Height = 40
         Layout = blGlyphTop
         Enabled = True
         OnClick = BtnEditClick
         ExplicitLeft = 78
+        ExplicitTop = 0
         ExplicitWidth = 87
         ExplicitHeight = 40
       end
       inherited BtnExecute: TRzToolButton
         Left = 613
+        Top = 0
         Width = 64
         Height = 40
         Layout = blGlyphTop
         ExplicitLeft = 613
+        ExplicitTop = 0
         ExplicitWidth = 64
         ExplicitHeight = 40
       end
       inherited BtnDelete: TRzToolButton
         Left = 677
+        Top = 0
         Layout = blGlyphTop
         Enabled = True
         Visible = True
         ExplicitLeft = 677
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnSave: TRzToolButton
         Left = 737
+        Top = 0
         Width = 77
         Height = 40
         DropDownMenu = SaveMenu
@@ -144,24 +165,29 @@ inherited FrmDocOutList: TFrmDocOutList
         Visible = True
         OnClick = nil
         ExplicitLeft = 737
+        ExplicitTop = 0
         ExplicitWidth = 77
         ExplicitHeight = 40
       end
       inherited BtnExit: TRzToolButton
         Left = 814
+        Top = 0
         Layout = blGlyphTop
         ExplicitLeft = 814
+        ExplicitTop = 0
         ExplicitWidth = 60
         ExplicitHeight = 40
       end
       inherited BtnView: TRzToolButton
         Left = 165
+        Top = 0
         Width = 74
         Height = 40
         Layout = blGlyphTop
         Enabled = True
         OnClick = BtnViewClick
         ExplicitLeft = 165
+        ExplicitTop = 0
         ExplicitWidth = 74
         ExplicitHeight = 40
       end
@@ -169,131 +195,162 @@ inherited FrmDocOutList: TFrmDocOutList
     object cxGrid1: TcxGrid
       Left = 1
       Top = 70
-      Width = 998
-      Height = 342
+      Width = 1110
+      Height = 692
       Align = alClient
       TabOrder = 1
       LookAndFeel.SkinName = 'MoneyTwins'
-      LookAndFeel.SkinName = 'MoneyTwins'
+      ExplicitWidth = 998
+      ExplicitHeight = 342
       object cxGrid1DBTableView1: TcxGridDBTableView
         OnDblClick = BtnEditClick
         OnKeyUp = FormKeyUp
-        NavigatorButtons.ConfirmDelete = False
+        Navigator.Buttons.CustomButtons = <>
+        Navigator.Buttons.First.Visible = True
+        Navigator.Buttons.PriorPage.Visible = True
+        Navigator.Buttons.Prior.Visible = True
+        Navigator.Buttons.Next.Visible = True
+        Navigator.Buttons.NextPage.Visible = True
+        Navigator.Buttons.Last.Visible = True
+        Navigator.Buttons.Insert.Visible = True
+        Navigator.Buttons.Append.Visible = False
+        Navigator.Buttons.Delete.Visible = True
+        Navigator.Buttons.Edit.Visible = True
+        Navigator.Buttons.Post.Visible = True
+        Navigator.Buttons.Cancel.Visible = True
+        Navigator.Buttons.Refresh.Visible = True
+        Navigator.Buttons.SaveBookmark.Visible = True
+        Navigator.Buttons.GotoBookmark.Visible = True
+        Navigator.Buttons.Filter.Visible = True
         OnCustomDrawCell = cxGrid1DBTableView1CustomDrawCell
         DataController.DataModeController.GridModeBufferCount = 10
         DataController.DataSource = srDocList
+        DataController.DetailKeyFieldNames = 'None selected'
+        DataController.KeyFieldNames = 'F_DOC_OUT'
         DataController.Summary.DefaultGroupSummaryItems = <
           item
             Kind = skSum
             Position = spFooter
-            Column = cxGrid1DBTableView1F_PAY_SUM
+            Column = cxGrid1DBTableView1F_PAY_SUM1
           end>
         DataController.Summary.FooterSummaryItems = <
           item
             Kind = skSum
-            Column = cxGrid1DBTableView1F_DOC_SUM
+            Column = cxGrid1DBTableView1F_DOC_SUM1
           end
           item
             Kind = skSum
-            Column = cxGrid1DBTableView1F_DOC_COUNT
+            Column = cxGrid1DBTableView1F_DOC_COUNT1
           end
           item
             Kind = skSum
-            Column = cxGrid1DBTableView1F_DOC_SKIDKA
+            Column = cxGrid1DBTableView1F_DOC_SKIDKA1
           end
           item
             Kind = skSum
-            Column = cxGrid1DBTableView1F_PAY_SUM
+            Column = cxGrid1DBTableView1F_PAY_SUM1
           end>
         DataController.Summary.SummaryGroups = <>
+        OptionsBehavior.IncSearch = True
         OptionsCustomize.ColumnsQuickCustomization = True
+        OptionsData.Deleting = False
+        OptionsData.Editing = False
+        OptionsData.Inserting = False
         OptionsSelection.CellSelect = False
         OptionsSelection.MultiSelect = True
         OptionsView.CellAutoHeight = True
         OptionsView.ColumnAutoWidth = True
         OptionsView.Footer = True
         OptionsView.HeaderAutoHeight = True
+        OptionsView.HeaderFilterButtonShowMode = fbmButton
+        OptionsView.Indicator = True
+        OptionsView.ShowColumnFilterButtons = sfbWhenSelected
         Styles.Background = DM.cxStyle12
         Styles.Content = DM.cxStyle13
         Styles.StyleSheet = DM.GridTableViewStyleSheetDevExpress
-        object cxGrid1DBTableView1F_PARTNER: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PARTNER1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PARTNER'
           Visible = False
+          Width = 74
         end
-        object cxGrid1DBTableView1F_NUMBER: TcxGridDBColumn
+        object cxGrid1DBTableView1F_NUMBER1: TcxGridDBColumn
           DataBinding.FieldName = 'F_NUMBER'
           Width = 53
         end
-        object cxGrid1DBTableView1F_DATE: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DATE1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DATE'
           Width = 61
         end
-        object cxGrid1DBTableView1F_STATE: TcxGridDBColumn
+        object cxGrid1DBTableView1F_STATE1: TcxGridDBColumn
           DataBinding.FieldName = 'F_STATE'
           Visible = False
+          Width = 74
         end
-        object cxGrid1DBTableView1F_PAYDATE_PLAN: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PAYDATE_PLAN1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PAYDATE_PLAN'
           Width = 69
         end
-        object cxGrid1DBTableView1F_STATE_NAME: TcxGridDBColumn
+        object cxGrid1DBTableView1F_STATE_NAME1: TcxGridDBColumn
           DataBinding.FieldName = 'F_STATE_NAME'
           Width = 42
         end
-        object cxGrid1DBTableView1F_SKLAD_NAME: TcxGridDBColumn
+        object cxGrid1DBTableView1F_SKLAD_NAME1: TcxGridDBColumn
           DataBinding.FieldName = 'F_SKLAD_NAME'
           Width = 49
         end
-        object cxGrid1DBTableView1F_PARTNER_NAME: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PARTNER_NAME1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PARTNER_NAME'
           Width = 235
         end
-        object cxGrid1DBTableView1F_SKLAD: TcxGridDBColumn
+        object cxGrid1DBTableView1F_SKLAD1: TcxGridDBColumn
           DataBinding.FieldName = 'F_SKLAD'
           Visible = False
+          Width = 74
         end
-        object cxGrid1DBTableView1F_DOC_COUNT: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DOC_COUNT1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DOC_COUNT'
           Width = 73
         end
-        object cxGrid1DBTableView1F_DOC_SUM: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DOC_SUM1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DOC_SUM'
           Width = 62
         end
-        object cxGrid1DBTableView1F_DOC_SKIDKA: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DOC_SKIDKA1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DOC_SKIDKA'
           Width = 59
         end
-        object cxGrid1DBTableView1F_PRICE_NAME: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PRICE_NAME1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PRICE_NAME'
           Width = 46
         end
-        object cxGrid1DBTableView1F_DOC_SKIDKA_PERCENT: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DOC_SKIDKA_PERCENT1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DOC_SKIDKA_PERCENT'
           Width = 49
         end
-        object cxGrid1DBTableView1F_DOC_OUT: TcxGridDBColumn
+        object cxGrid1DBTableView1F_DOC_OUT1: TcxGridDBColumn
           DataBinding.FieldName = 'F_DOC_OUT'
           Visible = False
+          Width = 74
         end
-        object cxGrid1DBTableView1F_PAY_SUM: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PAY_SUM1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PAY_SUM'
           Width = 65
         end
-        object cxGrid1DBTableView1TYPE: TcxGridDBColumn
+        object cxGrid1DBTableView1TYPE1: TcxGridDBColumn
           Caption = #1058#1080#1087' '#1087#1088#1086#1076#1072#1078#1080
           DataBinding.FieldName = 'TYPE'
           Width = 53
         end
-        object cxGrid1DBTableView1F_PAY_TYPE: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PAY_TYPE1: TcxGridDBColumn
           DataBinding.FieldName = 'F_PAY_TYPE'
           Visible = False
+          Width = 74
         end
-        object cxGrid1DBTableView1F_USER: TcxGridDBColumn
+        object cxGrid1DBTableView1F_USER1: TcxGridDBColumn
           DataBinding.FieldName = 'F_USER'
           Width = 42
         end
-        object cxGrid1DBTableView1F_PROPERTY_1: TcxGridDBColumn
+        object cxGrid1DBTableView1F_PROPERTY_11: TcxGridDBColumn
           DataBinding.FieldName = 'F_PROPERTY_1'
           PropertiesClassName = 'TcxCheckBoxProperties'
           Properties.ValueChecked = '1'
@@ -309,13 +366,14 @@ inherited FrmDocOutList: TFrmDocOutList
     object ToolBar1: TToolBar
       Left = 1
       Top = 41
-      Width = 998
+      Width = 1110
       Height = 29
       Caption = 'ToolBar1'
       DrawingStyle = dsGradient
       GradientEndColor = clWhite
       GradientStartColor = clGradientActiveCaption
       TabOrder = 2
+      ExplicitWidth = 998
       object Editstr_date: TDateTimePicker
         Left = 0
         Top = 0

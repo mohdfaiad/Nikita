@@ -85,14 +85,14 @@ uses
 
 procedure TFramBufer.BtnMoveAllLeftClick(Sender: TObject);
 begin
-  case activeForm of
+{  case activeForm of
     IdxDocIn:
       break;
     IdxDocOut:
       break;
     IdxDocMove:
       break;
-  end;
+  end;}
 end;
 
 procedure TFramBufer.cxGridDBTableViewBufferDragDrop(Sender, Source: TObject; X,
